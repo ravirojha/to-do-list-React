@@ -1,3 +1,3 @@
 export default function Header() {
-  return <div>todos</div>;
+  return <h1 className="todos">todos</h1>;
 }

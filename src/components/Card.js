@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import InputField from './InputField';
-import List from './List';
 import ListFooter from './ListFooter';
 
 export default function Card() {
   const [input, setInput] = useState('');
   const [tasks, setTasks] = useState([]);
   return (
-    <div>
+    <div className="card-container">
       <InputField
         input={input}
         setInput={setInput}
@@ -15,7 +14,7 @@ export default function Card() {
         setTasks={setTasks}
       />
 
-      <ListFooter tasks={tasks} setTasks={setTasks} />
+      {tasks.length > 0 && <ListFooter tasks={tasks} setTasks={setTasks} />}
     </div>
   );
 }
