@@ -116,6 +116,7 @@ export default function List({ tasks, setTasks, OgArray, OgSetArray }) {
       <input
         key={task.id}
         type="text"
+        className="list-item-input"
         defaultValue={task.value}
         onChange={handleChange}
         onKeyDown={handleSubmit}
@@ -132,7 +133,7 @@ export default function List({ tasks, setTasks, OgArray, OgSetArray }) {
       >
         <input
           type="checkbox"
-          className='checkBox'
+          className="checkBox"
           checked={task.completed}
           onClick={() => {
             handleCheck(task);

@@ -5,6 +5,7 @@ import ListFooter from './ListFooter';
 export default function Card() {
   const [input, setInput] = useState('');
   const [tasks, setTasks] = useState([]);
+
   return (
     <div className="card-container">
       <InputField
